@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Risk Assessment</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <h1>Know Your Chances Of Getting Diabetes!</h1>
+    </div>
+    
+    <div class="container">
+        <div class="left-column">
+            <div class="image-container">
+                <img src="Glucose-meter.jpg" alt="Glucose meter">
+            </div>
+            
+            <div class="info-card">
+                <h3>Why is early detection important?</h3>
+                <p>Identifying diabetes risk factors early can help prevent complications and improve quality of life through lifestyle changes and medical interventions.</p>
+            </div>
+        </div>
+        
+        <div class="right-column">
+            <div class="form-container">
+                <h2 class="form-title">Enter Your Health Information</h2>
+                
+                <form id="predictionForm">
+                    <div class="form-group">
+                        <label for="pregnancies">No. of Pregnancies</label>
+                        <input type="number" class="form-control" id="pregnancies" placeholder="Enter number of pregnancies">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="glucose">Glucose Level (mg/dL)</label>
+                        <input type="number" class="form-control" id="glucose" placeholder="Enter glucose level">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bloodPressure">Blood Pressure (mm Hg)</label>
+                        <input type="number" class="form-control" id="bloodPressure" placeholder="Enter blood pressure">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="bmi">Body Mass Index (BMI)</label>
+                        <input type="number" step="0.1" class="form-control" id="bmi" placeholder="Enter your BMI">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="dpf">Diabetes Pedigree Function</label>
+                        <input type="number" step="0.001" class="form-control" id="dpf" placeholder="Enter diabetes pedigree function">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="age">Age (years)</label>
+                        <input type="number" class="form-control" id="age" placeholder="Enter your age">
+                    </div>
+                    
+                    <button type="button" class="btn-predict" onclick="predict()">Predict Risk</button>
+                </form>
+                
+                <div class="result-container" id="resultContainer">
+                    <div class="result positive" id="result">No need to fear! You have no dangerous symptoms of the disease.</div>
+                    <p class="disclaimer">Note: This tool provides an estimate based on statistical models and should not replace professional medical advice. Please consult with a healthcare provider for proper diagnosis and treatment.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
